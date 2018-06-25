@@ -1,7 +1,3 @@
-h1{
-	background-image: url(../img/sobre-background.jpg);
-	padding: 10px;	
-}
 h2{
 	border-bottom: 2px solid #333333;/*Linha abaixo dos titulos*/
 	margin-top: 30px;
@@ -11,6 +7,29 @@ p{
 	text-indent: 15px; /*Tamanho da margem da primeira linha do texto*/
 	text-align: justify;
 }
+.artigos h1{
+	background-image: url(../img/sobre-background.jpg);
+	padding: 10px;	
+}
+/*Exercicíos 5.4*/
+/*Selecionando a primeira letra*/
+.artigos p::first-letter{  
+	font-weight: bold;
+}
+/**********************************
+*Selecione as primeiras linhas dos
+*parágrafos que não são precedidos 
+*por outros parágrafos
+*:not(p) + p::first-line
+***********************************/
+.artigos :not(p) + p::first-line{
+	font-variant: small-caps;
+}
+/*Tirar a indentação do primeiro paragrafo da pagina*/
+h1 + p{
+	text-indent: 0; 
+}
+
 body{
 	color: #333333;
 	font-family: "Lucinda Sans Unicode", "Lucinda Grande", sans-serif;
@@ -36,12 +55,6 @@ figcaption{
 	margin:30px 0;
 	padding: 94px;
 }
-#rodape img{
-	margin-right: 30px;
-	vertical-align: middle;/*Alinhamento vertical no meio*/
-	width: 94px;
-}
-
 #familia-pelho{
 	float: right;
 	margin: 0 0 10px 10px;
