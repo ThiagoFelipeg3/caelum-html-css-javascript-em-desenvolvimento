@@ -224,3 +224,45 @@ footer .container{
 	float: left;
 	margin-left: 25px
 }
+/***********************************
+*Aqui começa os estilos para mobile
+************************************/
+
+@media (max-width: 939px){
+.container{
+	width: 96%;
+}
+header h1{
+	text-align: center;
+}
+header h1 img{
+	max-width: 50%;
+}
+.sacola{
+	display: none;
+}
+.menu-opcoes{
+	position: static; /*posição static já e uma posição padrão*/
+	text-align: center;
+}
+.menu-opcoes ul li{
+	display: inline-block;
+	margin: 5px;
+}
+.busca,
+.menu-departamentos,
+.banner-destaque img{
+	margin-right: 0;
+	width: 100%;
+}
+.painel{
+	width: auto;
+}
+.painel li{
+	width: 30%;
+}
+.painel img{
+	width: 100%;
+}
+
+}
