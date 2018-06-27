@@ -1,0 +1,85 @@
+.produto{
+	color: #333;
+	line-height: 1.3; /*Espaço entre as linhas*/
+	margin-top: 2em;
+}
+.produto h1{
+	font-size: 1.8em;
+	font-weight: bold;
+}
+.produto p{
+	font-size: 1.2em;
+	font-style: italic;
+	margin-bottom: 1em;
+}
+.comprar{
+	background-color: #91BD3C;
+	border: none;
+	color: #333;
+
+	font-size: 1.4em;
+	text-transform: uppercase;/*letras maiusculas*/
+
+	box-shadow: 0 1px 3px #777;
+
+	display: block;
+	padding: 0.5em 1em;
+	margin: 1em 0;
+}
+.cores label::after{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 30px;
+
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	box-sizing: border-box;
+
+	border: 6px solid rgba(0,0,0,0);
+	transition: 1s;
+	
+	/*Muda o curso para mãozinha*/
+	cursor: pointer;
+}
+/*O hover nao funciona para mobile*/
+.cores label:hover::after{
+	border: 6px solid rgba(0,0,0,0.1); 
+}
+label[for=verde]::after {
+	background-color: #33CC66;
+}
+label[for=rosa]::after {
+	background-color: #FF6666;
+}
+label[for=azul]::after {
+	background-color: #6666FF;
+}
+
+.cores input:checked + label::after {
+	border: 6px solid rgba(0,0,0,0.3);
+}
+.cores input[type=radio]{
+	display: none;
+}
+.cores input:not(:checked) + label img{
+	display: none;
+}
+.cores{
+	position: relative;
+	padding-top: 90px;
+}
+label[for=verde]::after{
+	left: 0;
+}
+label[for=rosa]::after{
+	left: 60px;
+}
+label[for=azul]::after{
+	left: 120px;
+}
+.cores label img{
+	display: block;
+	max-width: 100%; /*A imagem não vai vazar para fora do elemento pai*/
+}
