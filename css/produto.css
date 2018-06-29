@@ -83,3 +83,63 @@ label[for=azul]::after{
 	display: block;
 	max-width: 100%; /*A imagem não vai vazar para fora do elemento pai*/
 }
+/**************************************
+*Aqui começa o tratamento para Desktop
+***************************************/
+
+@media(min-width: 630px){
+.produto{
+	/**************************************************
+	*A foto vai se posicionar absolutamente com relaçao 
+	*a esse elemento por isso preciso estar posicionado
+	**************************************************/
+	position: relative;
+
+	/*deixar 40% de espaço em branco na esquerda para foto ocupar*/
+	padding-left: 40%;
+	font-size: 1.2em;
+}
+.cores{
+	/*****************************************************
+	*Estava relative antes; reinicio para static para evitar
+	*que a foto se posicione com relação a min*
+	*****************************************************/
+	position: static;
+	/*zerando o padding-top que tinha antes e não priciso mais*/
+	padding: 0;
+}
+.cores legend{
+	/****************************************
+	*Estava absolute antes, para ter o mesmo 
+	*comportamento do Chrome e no FireFox.
+	*agora podemos oltar ao fluxo da página
+	*****************************************/
+	position: static;
+}
+.cores label img{
+	/*imagem se posiciona absolutamente á esquerda com relação ao .produto*/
+	position: absolute;
+	top:0;
+	left:0;
+	max-width: 35%;
+	max-height: 100%;
+}
+/********************************************************
+*Tive duvidas em reação ao elemento label:after
+*que são as bolinhas coloridas, elas estavam na posição 
+*absoluta por isso esta estava na esquerda ta tela,
+*com esta atributo label:after, eu consequi acessar e 
+*mudar para modo static fazendo com que volte para posição
+*no meio da tela.
+*********************************************************/
+.cores label::after{
+	/*****************************************************
+	*As bolinhas coloridas tinham posições absolutas e não 
+	*precisamos mais, basta flutuar uma do lado da outra
+	******************************************************/
+	position: static;
+	float: left;
+	margin-right: 10px;	
+
+}
+}
