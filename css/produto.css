@@ -137,7 +137,18 @@ td:first-child{ /*Primeiro filho de td*/
 .cores label img{
 	border: 2px solid #CCC;
 }
+.tamanhos output{
+	display= inline-block;
+	height: 44px;
+	widht: 44px;
+	
+	line-height: 44px; /*Alinha a altura do elemento en relação a borda*/
+	text-align: center;
 
+	border: 3px solid #666;
+	border-radius: 50%;	
+	color: #555;
+}
 @media (min-width:500px){
 	.detalhes{
 		font-size: 1.2em;
