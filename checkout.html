@@ -73,7 +73,7 @@
 						</dl>
 					</div>	
 				</div>
-				<div class="card mb-3>
+				<div class="card mb-3">
 					<div class="card-body">
 						<div>
 							<label for="qtd">Quantidade:</label>
@@ -83,8 +83,10 @@
 							<label for="total">Total:</label>
 							<output for="qtd preco" id="total" class="form-control">R$ 129,90</output>
 						</div>	
-					</div>    
+					</div>
+					
 				</div>
+
 			</div>
 
 
@@ -123,7 +125,8 @@
 								<div class="input-group-prepend">
 						 	<label class="input-group-text" for="cpf">CPF</label>
 						</div>
-							<input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+							<!--Máscaras númericas, data-mask: são usadas para ajuda o úsuario na hora de digitar os números-->
+							<input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" data-mask="999.999.999-99" required>
 						</div>
 					</div>
 
@@ -140,7 +143,8 @@
 						<div class="form-group">
 							<label for="numero-cartao">Número - CVV
 							</label>
-							<input type="text" class="form-control" id="numero-cartão" name="numero-cartao">
+							<!--Máscaras númericas, data-mask: são usadas para ajuda o úsuario na hora de digitar os números-->
+							<input type="text" class="form-control" id="numero-cartão" name="numero-cartao" data-mask="9999 9999 9999 - 999">
 						</div>
 
 						<div class="form-group">
@@ -182,7 +186,9 @@
 	</div>
 
 	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script>	
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/inputmask-plugin.js"></script>
+	<script type="text/javascript" src="js/total.js"></script>	
 </body>
 
 </html>
